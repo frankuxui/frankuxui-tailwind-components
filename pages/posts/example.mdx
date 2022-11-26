@@ -1,0 +1,35 @@
+---
+title: React Navigation Tutorial
+publishedOn: January, 6th. 2022
+excerpt: React Navigation is a number one tool to learn in React Native. You would always use them; these are some of the best practices in using React Navigation
+
+---
+
+### My first post
+
+
+```jsx live=true
+() => {
+  const [likes, increaseLikes] = React.useState(0);
+
+  return (
+    <div>
+      <h1>
+        {`${likes} likes`}
+      </h1>
+      <button className='py-2 px-4 bg-red-400' onClick={() => increaseLikes(likes + 1)}>Like</button>
+    </div>
+  );
+}
+```
+
+```jsx live
+() => {
+  return (
+    <div>
+      <h1>Hello World Example</h1>
+    </div>
+  );
+};
+```
+

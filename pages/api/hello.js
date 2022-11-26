@@ -1,5 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { getPosts } from '../../utils/getPost';
 
 export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+  const posts = getPosts(2); // argument will change
+
+  res.status(200).json(posts);
 }

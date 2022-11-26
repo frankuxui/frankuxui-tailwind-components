@@ -1,0 +1,34 @@
+---
+title: Alert
+slug: alert
+group: components
+description: Muestra un diálogo de alerta con un mensaje opcional, y aguardará hasta que el usuario cierre la ventana de diálogo.
+---
+
+### My first post
+
+```jsx live=false
+() => {
+  const [likes, increaseLikes] = React.useState(0);
+
+  return (
+    <div>
+      <h1>
+        {`${likes} likes`}
+      </h1>
+      <button className='py-2 px-4 bg-red-400' onClick={() => increaseLikes(likes + 1)}>Like</button>
+    </div>
+  );
+}
+```
+
+```jsx react-live
+() => {
+  return (
+    <div>
+      <h1>Hello World Example</h1>
+    </div>
+  );
+};
+```
+
