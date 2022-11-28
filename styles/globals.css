@@ -27,3 +27,39 @@ a {
     background: black;
   }
 }
+
+@layer components {
+  h1 {
+    @apply text-4xl md:text-5xl font-bold font-roboto
+  }
+  h2 {
+    @apply text-3xl md:text-4xl font-bold font-roboto
+  }
+  h3 {
+    @apply text-2xl md:text-3xl font-bold font-roboto
+  }
+  h4 {
+    @apply text-xl md:text-2xl font-bold font-roboto
+  }
+  h5 {
+    @apply text-base md:text-lg font-medium font-roboto
+  }
+  h6 {
+    @apply text-base font-bold font-roboto 
+  }
+
+  
+  h2[id], h3[id], h4[id], h5[id], h6[id]{
+    @apply mt-8 mb-4
+  }
+  .toc-content{
+    @apply sticky top-8 max-h-[calc(100vh_-_8rem)]
+  }
+  .toc-list {
+    @apply flex flex-col
+  }
+  .toc-list > li > .toc-list {
+    @apply pl-4
+  }
+  
+}

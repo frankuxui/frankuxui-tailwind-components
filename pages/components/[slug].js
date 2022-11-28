@@ -1,16 +1,36 @@
+import React from 'react'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
-
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { components } from '../../components/mdx/codeblock'
+import { components } from 'components/mdx'
+import LayoutDocs from 'components/layout/layout-docs'
 
-export default function Page ({ frontMatter: { title, description }, mdxSource }) {
+import rehypeSlug from 'rehype-slug'
+import { tocPluging } from 'components/toc'
+
+const options = {
+  mdxOptions: {
+    rehypePlugins: [
+      rehypeSlug,
+      tocPluging
+    ]
+  }
+}
+
+export default function Page ({
+  frontMatter: { title, description },
+  mdxSource
+}) {
   return (
     <>
-      <h1 className='text-6xl'>{title}</h1>
-      <MDXRemote {...mdxSource} components={components} />
+      <LayoutDocs
+        title={title}
+        description={description}
+      >
+        <MDXRemote {...mdxSource} components={components} />
+      </LayoutDocs>
     </>
   )
 }
@@ -31,8 +51,7 @@ const getStaticPaths = async () => {
 const getStaticProps = async ({ params: { slug } }) => {
   const markdownWithMeta = fs.readFileSync(path.join('pages/components/mdx/', slug + '.mdx'), 'utf-8')
   const { data: frontMatter, content } = matter(markdownWithMeta)
-  const mdxSource = await serialize(content, {})
-
+  const mdxSource = await serialize(content, options)
   return {
     props: {
       frontMatter,
