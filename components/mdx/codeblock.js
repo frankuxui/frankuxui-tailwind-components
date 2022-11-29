@@ -4,6 +4,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer'
 import Demo from './demo'
 import copy from 'copy-to-clipboard'
 import CopyClipboard from './copy-clipboard'
+
 // import { useEditable } from 'use-editable'
 
 const scope = {

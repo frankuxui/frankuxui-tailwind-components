@@ -8,6 +8,7 @@ module.exports = {
     './components/docs/**/*.{js,ts,jsx,tsx,md,mdx}',
     './pages/components/mdx/**/*.{md,mdx}'
   ],
+  darkMode: 'class',
   theme: {
     fontFamily: {
       sans: ['Proxima Nova', ...defaultTheme.fontFamily.sans],
