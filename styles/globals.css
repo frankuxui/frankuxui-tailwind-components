@@ -59,7 +59,12 @@ a {
     @apply flex flex-col
   }
   .toc-list > li > .toc-list {
-    @apply pl-4
+    @apply pl-4 text-sm
   }
-  
+  .toc-list > li > .toc-link {
+    @apply text-base font-medium
+  }
+  .toc-list > li > .toc-list .toc-link {
+    @apply text-sm
+  }
 }

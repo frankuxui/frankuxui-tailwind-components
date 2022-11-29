@@ -4,6 +4,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer'
 import Demo from './demo'
 import copy from 'copy-to-clipboard'
 import CopyClipboard from './copy-clipboard'
+import classNames from 'classnames'
 
 // import { useEditable } from 'use-editable'
 
@@ -51,7 +52,7 @@ const SyntaxHighlighter = props => {
           language={language}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre className={className} style={style}>
+            <pre className={classNames('!text-sm md:!text-base', className && className)} style={style}>
               {tokens.map((line, i) => (
                 <div {...getLineProps({ line, key: i })} key={i} className='table-row'>
                   <span className='table-cell text-right pr-4'>{i + 1}</span>

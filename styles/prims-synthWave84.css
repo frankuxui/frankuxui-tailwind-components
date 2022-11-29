@@ -38,7 +38,6 @@ pre[class*="language-"] {
 	background-image: none; /** New */
 	background-color: #2a2734 !important; /** New */
 	font-family: SFMono-Regular,Menlo,Monaco,Consolas,monospace!important;
-	font-size: 1em!important;
 	tab-size: 4!important;
 	white-space: pre-wrap!important;
 	padding: 0.75rem!important;

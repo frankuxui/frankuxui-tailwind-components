@@ -8,8 +8,8 @@ export const tocPluging = () => {
     cssClasses: {
       toc: 'toc-nav',
       list: 'toc-list',
-      listItem: 'text-sm mt-2',
-      link: 'underline text-slate-600'
+      listItem: 'mt-2',
+      link: 'toc-link underline text-slate-600'
     }
   }
   return toc(option)
@@ -33,8 +33,8 @@ const TocContent = () => {
 }
 const Toc = () => {
   return (
-    <div className='toc-content flex flex-col flex-none mt-12 w-64'>
-      <div className='font-medium mb-2 m-0'>En esta página</div>
+    <div className='hidden toc-content md:flex flex-col flex-none mt-12 w-64'>
+      <div className='text-lg font-medium mb-2 m-0'>In this page</div>
       <TocContent />
     </div>
   )
