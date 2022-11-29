@@ -39,11 +39,15 @@ pre[class*="language-"] {
 	background-color: #2a2734 !important; /** New */
 	font-family: SFMono-Regular,Menlo,Monaco,Consolas,monospace!important;
 	tab-size: 4!important;
-	white-space: pre-wrap!important;
 	padding: 0.75rem!important;
 	margin: 0.5rem 0 0 0!important;
 	display: block!important;
 	border-radius: 0.75rem!important;
+	
+	/* for scroll */
+	/*white-space: pre-wrap!important;*/
+	direction: ltr !important;
+	overflow: auto !important;
 }
 
 /* Inline code */

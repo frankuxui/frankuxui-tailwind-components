@@ -55,7 +55,7 @@ const SyntaxHighlighter = props => {
             <pre className={classNames('!text-sm md:!text-base', className && className)} style={style}>
               {tokens.map((line, i) => (
                 <div {...getLineProps({ line, key: i })} key={i} className='table-row'>
-                  <span className='table-cell text-right pr-4'>{i + 1}</span>
+                  {/* <span className='table-cell text-right pr-4'>{i + 1}</span> */}
                   <div className='table-cell'>
                     {line.map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })} />
