@@ -18,32 +18,8 @@ export const tocPluging = () => {
       toc: 'toc-nav',
       list: 'toc-list',
       listItem: 'mt-2',
-      link: 'toc-link underline text-slate-600'
+      link: 'toc-link text-slate-600'
     }
   }
   return toc(option)
 }
-
-const TocContent = () => {
-  const { window } = useWindow()
-  const renderElementRef = React.useRef(null)
-  React.useEffect(() => {
-    if (window) {
-      const tocElement = document.querySelector('.toc-nav')
-      renderElementRef?.current?.appendChild(tocElement)
-    }
-  }, [window])
-  return (
-    <div ref={renderElementRef} />
-  )
-}
-const Toc = () => {
-  return (
-    <div className='hidden toc-content md:flex flex-col flex-none mt-12 w-64'>
-      <div className='text-lg font-medium mb-2 m-0'>In this page</div>
-      {/* <TocContent /> */}
-    </div>
-  )
-}
-
-export default Toc
